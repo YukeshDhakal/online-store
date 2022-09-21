@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style1.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="connect.php" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" name="Fullname" >
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" name="Username" >
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" name="Email" >
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" name="Phone" >
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <i class="uil uil-eye-slash toggle"></i>
+            <input type="password" placeholder="Enter your password" name="Password" >
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" name="confirm " >
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" value="m">
+          <input type="radio" name="gender" id="dot-2" value="f">
+          <input type="radio" name="gender" id="dot-3" value="o">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="register">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+
+    const toggle = document.querySelector(".toggle"),
+          input = document.querySelector("input");
+
+          toggle.addEventListener("click", () =>{
+              if(input.type ==="password"){
+                input.type = "text";
+                toggle.classList.replace("uil-eye-slash", "uil-eye");
+              }else{
+                input.type = "password";
+              }
+          })
+
+</script>
+</body>
+</html>
